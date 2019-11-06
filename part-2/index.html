@@ -1,0 +1,89 @@
+<!--
+Custom Javascript Widget
+
+Create a custom widget using JQuery starting with this structured JSON file: https://www.reddit.com/r/worldnews.json
+
+The finished widget should display some basic information about the first 5 items in the feed such as title, url, and domain. 
+
+The widget should fit within a standard ad size of 300px wide by 600px tall.
+
+Design is up to you.  Creativity is encouraged.
+
+Recommended Time Allowance:  2 hours or less
+
+Start Time: 11/6/2019 7:57 am
+End Time: 11/6/2019 9:44 am
+URL: http://natealthoff.com/sandbox/fcc/part-2/
+-->
+<html>
+    <head>
+        <title>FCC JS Test</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script type="text/javascript" src="widget.js"></script>
+        <style type="text/css">
+            body {
+                margin:0;
+                padding:15px;
+            }
+            
+            #wrapper {
+                width:100%;
+                padding:0px;
+                margin:0px;
+            }
+            
+            #ads {
+                max-width:300px;
+                max-height:600px;
+                border:1px solid #666666;
+                padding:0px;
+                margin:0px;
+                margin-left:auto;
+                margin-right:auto;
+                display:block;
+            }
+            
+            #ads a {
+                text-decoration:none;
+            }
+            
+            #ads a div {
+                font-size:12px;
+                padding:5px;
+                color:#000000;
+                text-decoration:none;
+            }
+            
+            #ads a div b, #ads a div em {
+                color:#3366CC;
+            }
+            
+            #ads a:not(:last-child) div {
+                border-bottom:1px solid #666666;
+            }
+            
+            #ads a div.even {
+                background-color:#EEEEEE;
+            }
+            
+            #ads a div.odd {
+                background-color:#DDDDDD;
+            }
+            
+            #ads a div:hover {
+                background-color:#FFFFFF;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="wrapper">
+            <div id="ads">
+                <script type="text/javascript">
+                    getNews();
+                </script>
+            </div>
+        </div>
+    </body>
+</html>

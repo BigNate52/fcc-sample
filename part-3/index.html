@@ -1,0 +1,52 @@
+<!--
+ZeroCool
+
+Write a program that prints the numbers from 1 to 100.
+
+But for multiples of three print "Zero" instead of the number and for the multiples of five print "Cool".
+
+For numbers which are multiples of both three and five print "ZeroCool".
+
+This should be written in Javascript and be able to run in the console.
+
+Recommended Time Allowance:  30 minutes
+
+Start Time: 11/6/2019 10:05 am
+End Time: 11/6/2019 10:16 am
+URL: http://natealthoff.com/sandbox/fcc/part-3/
+-->
+<html>
+    <head>
+        <title>FCC ZeroCool Test</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script type="text/javascript">
+            function zeroCool() {
+                var lower = 1;
+                var upper = 100;
+                
+                for (var x=lower;x<=upper;x++) {
+                    var dsp = "";
+                    
+                    //check for multiples of 3
+                    if (x % 3 == 0) dsp += "Zero";
+                    
+                    //check for multiples of 5
+                    if (x % 5 == 0) dsp += "Cool";
+                    
+                    //check for multiples of both - will be done automatically
+                    
+                    //if it is not a multiple of both, just show the number
+                    if (dsp == '') dsp = x;
+                    
+                    //display the result for this revolution in the loop
+                    console.log(dsp);
+                }
+            }
+            
+            window.onload = zeroCool();
+        </script>
+    </head>
+    <body>
+    </body>
+</html>

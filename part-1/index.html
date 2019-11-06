@@ -1,0 +1,300 @@
+<!--
+Design
+ Implementation
+
+Break
+ the article design in the attached png file (HTML_CSS Quiz) into a functional web page using css grid for both mobile and desktop layouts.  Since this is a flat file and not a layered Photoshop/Sketch, document font choices, colors, etc can be chosen to match
+ as closely as possible. Use any text you'd like, as long as it fills in about the same amount of text as the design.  
+
+ 
+
+Recommended
+ Time Allowance:  2 hours or less
+
+Sample file
+ /HTML_CSS Quiz.png
+
+Start Time: 11/6/2019 3:44am
+End Time: 11/6/2019 5:43am
+URL: http://natealthoff.com/sandbox/fcc/part-1/
+-->
+<html>
+    <head>
+        <title>FCC Design Test</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style type="text/css">
+            * {
+                -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+                -moz-box-sizing: border-box;    /* Firefox, other Gecko */
+                box-sizing: border-box;         /* Opera/IE 8+ */
+                font-family: Verdana, sans-serif;
+            }
+            
+            #wrapper {
+                display:grid;
+                grid-template-columns: 350px 600px 5%;
+                grid-template-rows: auto auto auto 100px;
+                grid-gap: 15px;
+                margin-left:auto;
+                margin-right:auto;
+            }
+            
+            #headline {
+                grid-column-start:1;
+                grid-column-end:2;
+                grid-row-start:1;
+                grid-row-end:2;
+            }
+            
+            h1, h2 {
+                font-family:Times New Roman, serif;
+            }
+            
+            .dateline {
+                text-transform: uppercase;
+                color:#666666;
+                text-align:right;
+                width:100%;
+            }
+            
+            #content1 {
+                grid-column-start:2;
+                grid-column-end:3;
+                grid-row-start:1;
+                grid-row-end:2;
+            }
+            
+            #content2 {
+                grid-column-start:2;
+                grid-column-end:3;
+                grid-row-start:2;
+                grid-row-end:3;
+            }
+            
+            #content3 {
+                grid-column-start:2;
+                grid-column-end:3;
+                grid-row-start:3;
+                grid-row-end:4;
+            }
+            
+            .content p {
+                width:100%;
+            }
+            
+            .content p img {
+                width:100%;
+            }
+            
+            #link1 {
+                grid-column-start:1;
+                grid-column-end:2;
+                grid-row-start:2;
+                grid-row-end:3;
+                text-align:right;
+            }
+            
+            #link2 {
+                grid-column-start:1;
+                grid-column-end:2;
+                grid-row-start:3;
+                grid-row-end:4;
+                text-align:right;
+            }
+            
+            #social {
+                grid-column-start:3;
+                grid-column-end:4;
+                grid-row-start:1;
+                grid-row-end:4;
+                padding-top:15px;
+            }
+            
+            #footer {
+                background-color:#000000;
+                grid-column-start:1;
+                grid-column-end:4;
+                grid-row-start:4;
+                grid-row-end:5;
+                color:#FFFFFF;
+                text-align:center;
+                padding:25px;
+                font-size:10px;
+            }
+            
+            #social ul {
+                list-style:none;
+                margin:0;
+                padding:0;
+            }
+            
+            #social ul li a {
+                display:block;
+                padding-bottom:5px;
+            }
+            
+            .calloutlink {
+                color:#2f80ed;
+                font-weight:bold;
+                text-decoration:none;
+                font-family:Times New Roman, serif;
+            }
+            
+            .calloutlink:hover {
+                color:#256bc9;
+                text-decoration:underline;
+            }
+            
+            @media (max-width:1024px) {
+                #wrapper {
+                    display:grid;
+                    grid-template-columns: 100%;
+                    grid-template-rows: auto auto auto auto auto auto;
+                    grid-gap: 15px;
+                }
+
+                #headline {
+                    grid-column-start:1;
+                    grid-column-end:2;
+                    grid-row-start:1;
+                    grid-row-end:2;
+                }
+
+                .dateline {
+                    text-align:left;
+                }
+
+                #content1 {
+                    grid-column-start:1;
+                    grid-column-end:2;
+                    grid-row-start:3;
+                    grid-row-end:4;
+                }
+
+                #content2 {
+                    grid-column-start:1;
+                    grid-column-end:2;
+                    grid-row-start:5;
+                    grid-row-end:6;
+                }
+
+                #content3 {
+                    grid-column-start:1;
+                    grid-column-end:2;
+                    grid-row-start:7;
+                    grid-row-end:8;
+                }
+
+                #link1 {
+                    grid-column-start:1;
+                    grid-column-end:2;
+                    grid-row-start:4;
+                    grid-row-end:5;
+                    text-align:left;
+                }
+
+                #link2 {
+                    grid-column-start:1;
+                    grid-column-end:2;
+                    grid-row-start:6;
+                    grid-row-end:7;
+                    text-align:left;
+                }
+
+                #social {
+                    grid-column-start:1;
+                    grid-column-end:2;
+                    grid-row-start:2;
+                    grid-row-end:3;
+                }
+
+                #footer {
+                    background-color:#000000;
+                    grid-column-start:1;
+                    grid-column-end:2;
+                    grid-row-start:8;
+                    grid-row-end:9;
+                    color:#FFFFFF;
+                    text-align:center;
+                    padding:25px;
+                    font-size:10px;
+                }
+
+                #social ul {
+                    list-style:none;
+                }
+
+                #social ul li {
+                    float:left;
+                }
+
+                #social ul li a {
+                    display:block;
+                    padding-right:5px;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <div id="wrapper">
+            <div id="headline">
+                <h1>Aliquam sit amet tortor viverra, euismod odio ut, sodales leo</h1>
+                <div class="dateline">November 5, 2019</div>
+            </div>
+            <div id="content1" class="content">
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut ultrices mauris sit amet turpis vestibulum euismod. Quisque accumsan neque vel magna sodales, ac luctus nisl pulvinar. Cras eleifend odio non lectus dignissim, id auctor neque sollicitudin. Praesent accumsan magna ut metus elementum, ut auctor felis bibendum. Morbi in eleifend sapien. Pellentesque semper facilisis lobortis. Aliquam eget fringilla enim.
+                </p>
+                <h2>Nunc eget aliquam neque, quis finibus turpis. Nullam dapibus lectus ultrices.</h2>
+                <p>
+                    Nunc eget aliquam neque, quis finibus turpis. Nullam dapibus lectus ultrices, dictum nisi sed, placerat odio. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Suspendisse elementum ultrices vulputate. Pellentesque mattis justo dui, nec finibus sem semper sit amet. 
+                </p>
+            </div>
+            <div id="content2" class="content">
+                <p>
+                    Sed metus dui, viverra vel est vel, ultricies faucibus nibh. Cras rhoncus fringilla ligula, nec venenatis lectus molestie ut. Aenean pharetra ornare massa, id ultricies dui sodales vel. Nullam eleifend commodo est feugiat volutpat. Donec ut libero a sapien convallis aliquam. Vivamus posuere, erat non pulvinar pellentesque, justo sem dictum lacus, in rutrum ante nunc nec neque. Praesent luctus, ipsum nec mattis ultricies, neque ex euismod est, porta rutrum nulla tellus id justo. Vestibulum tempor est in metus porttitor, ut efficitur lorem lobortis. Vivamus consectetur nibh a diam finibus, ut venenatis urna dapibus. In hac habitasse platea dictumst.
+                </p>
+                <p>
+                    <img src="img/photo-1.jpg" title="This would be a caption if I were more creative.">
+                </p>
+                <p>
+                    Maecenas lorem nisi, vehicula a pretium in, placerat in risus. Aliquam sit amet tortor viverra, euismod odio ut, sodales leo. Etiam elit lectus, vehicula ac molestie vel, rhoncus sit amet enim. Sed lacinia massa ex, vitae auctor sapien accumsan nec. Etiam sed tincidunt augue. Vivamus urna augue, laoreet sit amet vestibulum a, interdum ut eros. Etiam nunc quam, rhoncus sed eros ut, malesuada ullamcorper nulla. Aliquam enim nulla, efficitur eu dui ac, pharetra convallis eros. Donec condimentum faucibus velit ac pulvinar. Donec eu erat ut elit condimentum pretium at at libero. Integer tempor aliquam ipsum id pulvinar. Fusce ultrices nulla lacus, sit amet consequat neque dignissim venenatis.
+                </p>
+                <p> 
+                    Phasellus felis tortor, ultrices et ullamcorper sit amet, consectetur a nisi. Praesent bibendum, ante et facilisis vulputate, lacus est dictum velit, a consequat elit dui non dui. Donec nibh ante, iaculis sit amet eros vitae, tristique pretium justo. Morbi vitae maximus nisi. Quisque eleifend tincidunt ipsum, ut tincidunt felis. Vivamus aliquam faucibus fringilla. Duis convallis nunc sem, eu rutrum nunc finibus sit amet. Nunc lacinia urna ut tellus lobortis, et finibus neque aliquam. In vitae neque condimentum, lobortis justo volutpat, tristique leo. Nullam lacus diam, condimentum ac malesuada ut, dignissim ut purus. Nulla eget facilisis mi, ut fringilla nisi. Etiam finibus felis sed massa venenatis, nec pharetra mauris volutpat. Curabitur bibendum mauris blandit ligula feugiat scelerisque. Nulla vitae arcu lorem.
+                </p>
+                <h2>Nunc eget aliquam neque, quis finibus turpis. Nullam dapibus lectus ultrices.</h2>
+                <p>
+                    Morbi sed feugiat diam. In hac habitasse platea dictumst. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Aliquam ut erat a metus pretium sagittis nec nec neque. Ut eleifend euismod eros nec iaculis. Donec ex ex, sagittis eu tincidunt id, fringilla eget nibh. Aenean fermentum ipsum at aliquam aliquam. Vestibulum tempus neque turpis, ultrices dignissim lectus mollis non. Maecenas nec ligula id velit luctus facilisis. Nullam posuere neque a tortor malesuada, nec egestas mi aliquam.                     
+                </p>
+            </div>
+            <div id="content3" class="content">
+                <p>
+                    Morbi sed feugiat diam. In hac habitasse platea dictumst. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Aliquam ut erat a metus pretium sagittis nec nec neque. Ut eleifend euismod eros nec iaculis. Donec ex ex, sagittis eu tincidunt id, fringilla eget nibh. Aenean fermentum ipsum at aliquam aliquam. Vestibulum tempus neque turpis, ultrices dignissim lectus mollis non. Maecenas nec ligula id velit luctus facilisis. Nullam posuere neque a tortor malesuada, nec egestas mi aliquam.                     
+                </p>
+            </div>
+            <div id="link1">
+                <a href="#" class="calloutlink">Maecenas lorem nisi, vehicula</a>
+            </div>
+            <div id="link2">
+                <a href="#" class="calloutlink">Nullam dapibus lectus ultrices</a>
+            </div>
+            <div id="social">
+                <ul>
+                    <li><a href="#" target="_blank"><img src="img/icon_facebook.png" title="Facebook"></a></li>
+                    <li><a href="#" target="_blank"><img src="img/icon_twitter.png" title="Twitter"></a></li>
+                    <li><a href="#" target="_blank"><img src="img/icon_linkedin.png" title="LinkedIn"></a></li>
+                    <li><a href="#" target="_blank"><img src="img/icon_email.png" title="Email"></a></li>
+                </ul>
+            </div>
+            <div id="footer">
+                <p>
+                    &copy; INFORUM and Forum Communications Company
+                    <br />
+                    101 5th Street North, Fargo, ND 58102
+                </p>
+            </div>
+        </div>
+    </body>
+</html>
